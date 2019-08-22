@@ -68,7 +68,8 @@ export default {
         genres: '',
         tags: '',
         sort: 'U',
-        range: '5,10'
+        range: '5,10',
+        num: 15
       },
       searchQ: '',
       info: {
