@@ -22,7 +22,7 @@
         <img class="cover-img" :src="index.movieBean.cover">
         <label>名字：</label><span>{{ index.movieBean.title }}</span>
         <label>导演：</label><span>{{ info.directors[0].name }}</span>
-        <label>地址：</label><span>{{ info.address }}</span>
+        <label>地址：</label><span>{{ index.address }}</span>
       </el-dialog>
     </div>
   </div>
