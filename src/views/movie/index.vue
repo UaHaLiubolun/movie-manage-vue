@@ -22,13 +22,14 @@
         <img class="cover-img" :src="index.movieBean.cover">
         <label>名字：</label><span>{{ index.movieBean.title }}</span>
         <label>导演：</label><span>{{ info.directors[0].name }}</span>
+        <label>地址：</label><span>{{ info.address }}</span>
       </el-dialog>
     </div>
   </div>
 </template>
 <script>
 import { getList, searchMovie } from '@/api/moive'
-import { getSubject } from '@/api/douban';
+import { getSubject } from '@/api/douban'
 
 export default {
   // eslint-disable-next-line vue/require-prop-types
@@ -55,15 +56,15 @@ export default {
     this.fetchData()
   },
   methods: {
-    showInfo(index) {
-      this.index = index
-      this.infoDialog = true
-      this.getSubject()
-    },
     search() {
       searchMovie({ q: this.searchQ }).then(response => {
         this.list = response.data
       })
+    },
+    showInfo(index) {
+      this.index = index
+      this.infoDialog = true
+      this.getSubject()
     },
     getSubject() {
       getSubject(this.index.movieBean.movieId).then(response => {

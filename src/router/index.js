@@ -87,13 +87,19 @@ export const constantRoutes = [
     path: '/movie/set',
     name: '电影设置',
     component: Layout,
-    meta: { title: '电影设置', icon: 'example' },
+    meta: { title: '电影设置', icon: 'form' },
     children: [
       {
         path: 'index',
         name: '电影设置',
         component: () => import('@/views/movie/set/index'),
-        meta: { title: '电影设置', icon: 'table' },
+        meta: { title: '电影设置', icon: 'tree' }
+      },
+      {
+        path: 'all',
+        name: '所有电影',
+        component: () => import('@/views/movie/all/index'),
+        meta: { title: '所有电影', icon: 'table' }
       }
     ]
   },

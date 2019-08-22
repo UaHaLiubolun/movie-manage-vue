@@ -15,6 +15,22 @@ export function save(data) {
   })
 }
 
+export function query(data) {
+  return request({
+    url: '/movie/query',
+    method: 'post',
+    data
+  })
+}
+
+export function addSpider(data) {
+  return request({
+    url: '/spider/add',
+    method: 'post',
+    data
+  })
+}
+
 export function getList(data) {
   return request({
     url: '/movie/root',
